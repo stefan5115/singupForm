@@ -10,18 +10,47 @@
 <body>
     <div class="main">
         <div class="first">
-            <div>
-                <img src="" alt="">
-                <h1></h1>
+            <div class="logo">
+                <img src="odin-lined.png" alt="odin-logo" height="100px" width="100px">
+                <h1>ODIN</h1>
             </div>
-            <p></p>
+            <p>Photo by <a href="https://unsplash.com/@lexilaginess?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Lexi Laginess</a> on <a href="https://unsplash.com/photos/XYfjIT9c01Q?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
         </div>
         <div class="second">
-            <div></div>
-            <div></div>
-            <div></div>
+            <div class="top">
+                <h2 class="h2">This is not a real online service! You know you need something like this in your life to help realize your deepest dreams.</h2>
+                <h2 class="signup">Sign up now to get started.</h2>
+                <h2>You know you want to.</h2>
+            </div>
+            <div class="middle">
+                <h2 class="item1">Let's do this!</h2>
+                <label for="firstName">FIRST NAME <input type="text" name="First-Name" id="firstName" ></label>
+                <label for="lastName">LAST NAME <input type="text" name="Last-Name" id="lastName" ></label>
+                <label for="email">EMAIL <input type="email" name="" id="" ></label>
+                <label for="phone">PHONE NUMBER <input type="tel" name="" id="" ></label>
+                <label for="password">PASSWORD <input type="password" name="Password" id="password" required></label>
+                <label for="confirmPassword">CONFIRM PASSWORD <input type="password" name="Confirm-Password" id="confirmPassword" required></label>
+            </div>
+            <div class="bottom">
+                <button type="submit">Create Account</button>
+                <p>Already have an account?<a href="#">Log in</a></p>
+            </div>
         </div>
     </div>
-    
+    <script>
+        const password = document.getElementById("password")
+        const confirmPassword = document.getElementById("confirmPassword")
+
+        function validatePassword(){
+            if(password.value != confirm_password.value) {
+                 confirm_password.setCustomValidity("Passwords Don't Match");
+             } else {
+                confirm_password.setCustomValidity('');
+            }
+        }
+
+        password.onchange = validatePassword;
+        confirm_password.onkeyup = validatePassword;
+    </script>
 </body>
 </html>
