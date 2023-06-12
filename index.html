@@ -14,7 +14,9 @@
                 <img src="odin-lined.png" alt="odin-logo" height="100px" width="100px">
                 <h1>ODIN</h1>
             </div>
-            <p>Photo by <a href="https://unsplash.com/@lexilaginess?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Lexi Laginess</a> on <a href="https://unsplash.com/photos/XYfjIT9c01Q?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
+            <div class="par">
+                <p>Photo by <a href="https://unsplash.com/@lexilaginess?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Lexi Laginess</a> on <a href="https://unsplash.com/photos/XYfjIT9c01Q?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
+            </div>    
         </div>
         <div class="second">
             <div class="top">
@@ -24,33 +26,22 @@
             </div>
             <div class="middle">
                 <h2 class="item1">Let's do this!</h2>
-                <label for="firstName">FIRST NAME <input type="text" name="First-Name" id="firstName" ></label>
-                <label for="lastName">LAST NAME <input type="text" name="Last-Name" id="lastName" ></label>
-                <label for="email">EMAIL <input type="email" name="" id="" ></label>
-                <label for="phone">PHONE NUMBER <input type="tel" name="" id="" ></label>
-                <label for="password">PASSWORD <input type="password" name="Password" id="password" required></label>
-                <label for="confirmPassword">CONFIRM PASSWORD <input type="password" name="Confirm-Password" id="confirmPassword" required></label>
+                <form action="">
+                    <label for="firstName">FIRST NAME <input type="text" name="First-Name" id="firstName" ></label>
+                    <label for="lastName">LAST NAME <input type="text" name="Last-Name" id="lastName" ></label>
+                    <label for="email">EMAIL <input type="email" name="" id="" ></label>
+                    <label for="phone">PHONE NUMBER <input type="tel" name="" id="" ></label>
+                    <label for="password">PASSWORD <input type="password" name="Password" id="password" required onkeyup='passConfirm()' ></label>
+                    <label for="confirmPassword">CONFIRM PASSWORD <input type="password" name="Confirm-Password" id="confirmPassword" required onkeyup='passConfirm()'></label>
+                </form>
+                <span id="message"></span>
             </div>
             <div class="bottom">
-                <button type="submit">Create Account</button>
-                <p>Already have an account?<a href="#">Log in</a></p>
+                <button type="submit" class="button">Create Account</button>
+                <p>Already have an account? <a href="#">Log in</a></p>
             </div>
         </div>
     </div>
-    <script>
-        const password = document.getElementById("password")
-        const confirmPassword = document.getElementById("confirmPassword")
-
-        function validatePassword(){
-            if(password.value != confirm_password.value) {
-                 confirm_password.setCustomValidity("Passwords Don't Match");
-             } else {
-                confirm_password.setCustomValidity('');
-            }
-        }
-
-        password.onchange = validatePassword;
-        confirm_password.onkeyup = validatePassword;
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
